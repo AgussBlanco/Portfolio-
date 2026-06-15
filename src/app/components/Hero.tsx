@@ -237,51 +237,6 @@ export function Hero() {
             ))}
           </div>
         </div>
-
-        {/* Avatar */}
-        <div className="flex justify-center md:justify-end">
-          <div className="relative">
-            <div
-              className="absolute inset-0 rounded-full"
-              style={{
-                background: "conic-gradient(from 0deg, #8950d1, #2d5d7b, #36217e, #8950d1)",
-                padding: "2px",
-                borderRadius: "50%",
-                animation: "spin 8s linear infinite",
-              }}
-            />
-            <div
-              className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden"
-              style={{
-                border: "3px solid transparent",
-                background: "linear-gradient(#07141a, #07141a) padding-box, conic-gradient(from 0deg, #8950d1, #2d5d7b, #36217e, #8950d1) border-box",
-                boxShadow: "0 0 60px rgba(137,80,209,0.2)",
-              }}
-            >
-              <div
-                className="w-full h-full flex items-center justify-center"
-                style={{ background: "linear-gradient(135deg, #0d2030, #1a0a40)" }}
-              >
-                <div className="text-center space-y-2">
-                  <div
-                    className="w-20 h-20 mx-auto rounded-full flex items-center justify-center"
-                    style={{
-                      background: "linear-gradient(135deg, #2d5d7b, #8950d1)",
-                      fontSize: "2rem",
-                      fontWeight: 800,
-                      color: "#ffffff",
-                    }}
-                  >
-                    AB
-                  </div>
-                  <div className="font-mono text-xs" style={{ color: "#8aabbd" }}>
-                    &lt;dev /&gt;
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Scroll cue */}
