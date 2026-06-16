@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Github, Linkedin, Globe, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Send, CheckCircle } from "lucide-react";
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -41,9 +41,8 @@ export function Contact() {
   ];
 
   const socials = [
-    { icon: <Github size={18} />, label: "GitHub", href: "https://github.com" },
-    { icon: <Linkedin size={18} />, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: <Globe size={18} />, label: "Portfolio", href: "#" },
+    { icon: <Github size={18} />, label: "GitHub", href: "https://github.com/AgussBlanco" },
+    { icon: <Linkedin size={18} />, label: "LinkedIn", href: "https://www.linkedin.com/in/agust%C3%ADn-blanco-4401183b8/" },
   ];
 
   return (

@@ -11,6 +11,7 @@ const projects = [
     accent: "#8950d1",
     emoji: "🏓",
     image: "/images/PixelPongPantallaCarga.png",
+    github: "https://github.com/AgussBlanco/PixelPong",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const projects = [
     accent: "#8950d1",
     emoji: "⚔️",
     image: "/images/souls2d.png",
+    github: "https://github.com/AgussBlanco/Souls2D",
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const projects = [
     accent: "#36217e",
     emoji: "🖥️",
     image: "/images/ErgoPad.png",
+    github: "https://github.com/AgussBlanco/ErgoPad",
   },
 ];
 
@@ -77,7 +80,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
         </div>
         <div className="absolute top-4 right-4 flex gap-2">
           <a
-            href="https://github.com"
+            href={project.github}
             target="_blank"
             rel="noreferrer"
             className="p-2 rounded-lg transition-all duration-200"
@@ -97,26 +100,6 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
             onClick={(e) => e.stopPropagation()}
           >
             <Github size={15} />
-          </a>
-          <a
-            href="#"
-            className="p-2 rounded-lg transition-all duration-200"
-            style={{
-              background: "rgba(7,20,26,0.7)",
-              color: "#8aabbd",
-              border: "1px solid rgba(45,93,123,0.3)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = "#8950d1";
-              e.currentTarget.style.borderColor = "rgba(137,80,209,0.5)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = "#8aabbd";
-              e.currentTarget.style.borderColor = "rgba(45,93,123,0.3)";
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <ExternalLink size={15} />
           </a>
         </div>
       </div>
