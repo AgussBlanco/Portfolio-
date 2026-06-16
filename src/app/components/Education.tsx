@@ -1,6 +1,6 @@
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
 
-const subjects = ["Lógica de programación", "Bases de datos", "Lenguaje C", "Java", "SQL", "Desarrollo de software"];
+const subjects = ["Proyecto Informatico", "Bases de datos", "POO", "Redes", "Lógica Computacional", "Desarrollo de sistemas"];
 
 export function Education() {
   return (

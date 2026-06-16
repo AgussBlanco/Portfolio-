@@ -20,7 +20,7 @@ export function SoftSkills() {
             className="mt-2"
             style={{ fontSize: "2rem", fontWeight: 700, color: "#e2eff8" }}
           >
-            Competencias personales
+            Habilidades personales
           </h2>
           <div
             className="mt-3 h-px w-16"

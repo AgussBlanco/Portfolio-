@@ -1,16 +1,65 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mail, Phone, Github, Linkedin, Send, CheckCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+// Inicializar EmailJS (necesitas reemplazar con tu Public Key)
+const EMAILJS_PUBLIC_KEY = "gk-EsjfA2ZbI2336O";
+const EMAILJS_SERVICE_ID = "service_nfjogy6";
+const EMAILJS_TEMPLATE_ID = "template_ceqz8hh";
+
+if (EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+}
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [focused, setFocused] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
-    setTimeout(() => setSent(false), 4000);
+    setLoading(true);
+    setError("");
+
+    try {
+      if (
+        EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY" ||
+        EMAILJS_SERVICE_ID === "YOUR_SERVICE_ID" ||
+        EMAILJS_TEMPLATE_ID === "YOUR_TEMPLATE_ID"
+      ) {
+        throw new Error(
+          "EmailJS no está configurado. Por favor, configura tus credenciales."
+        );
+      }
+
+      const templateParams = {
+        to_email: "blancoagustin049@gmail.com",
+        from_name: form.name,
+        from_email: form.email,
+        message: form.message,
+        reply_to: form.email,
+      };
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
+
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setSent(false), 4000);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Error al enviar el mensaje. Intenta nuevamente."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputStyle = (field: string) => ({
@@ -206,26 +255,32 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full py-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300"
+              disabled={loading}
+              className="w-full py-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300 disabled:opacity-50"
               style={{
-                background: sent
-                  ? "linear-gradient(135deg, #2d5d7b, #36217e)"
-                  : "linear-gradient(135deg, #8950d1, #36217e)",
+                background:
+                  sent || error
+                    ? "linear-gradient(135deg, #2d5d7b, #36217e)"
+                    : "linear-gradient(135deg, #8950d1, #36217e)",
                 color: "#ffffff",
                 boxShadow: "0 0 24px rgba(137,80,209,0.25)",
               }}
               onMouseEnter={(e) => {
-                if (!sent) e.currentTarget.style.boxShadow = "0 0 36px rgba(137,80,209,0.45)";
+                if (!sent && !loading) e.currentTarget.style.boxShadow = "0 0 36px rgba(137,80,209,0.45)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = "0 0 24px rgba(137,80,209,0.25)";
               }}
             >
-              {sent ? (
+              {loading ? (
+                <>Enviando...</>
+              ) : sent ? (
                 <>
                   <CheckCircle size={16} />
                   ¡Mensaje enviado!
                 </>
+              ) : error ? (
+                <>{error}</>
               ) : (
                 <>
                   <Send size={16} />

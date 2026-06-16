@@ -3,7 +3,6 @@ import { Code2, FolderOpen, GraduationCap } from "lucide-react";
 const stats = [
   { icon: <GraduationCap size={20} />, value: "5+", label: "Años de formación" },
   { icon: <Code2 size={20} />, value: "4+", label: "Tecnologías aprendidas" },
-  { icon: <FolderOpen size={20} />, value: "3", label: "Proyectos realizados" },
 ];
 
 export function About() {
@@ -42,39 +41,6 @@ export function About() {
               busco aplicar lo aprendido en proyectos reales, mejorando mis
               habilidades y contribuyendo a equipos de trabajo.
             </p>
-          </div>
-
-          <div
-            className="p-5 rounded-2xl font-mono text-sm leading-relaxed"
-            style={{
-              background: "rgba(13,32,48,0.6)",
-              border: "1px solid rgba(45,93,123,0.2)",
-              color: "#8aabbd",
-            }}
-          >
-            <span style={{ color: "#8950d1" }}>const</span>{" "}
-            <span style={{ color: "#2d5d7b" }}>agustin</span>{" "}
-            <span style={{ color: "#e2eff8" }}>= {"{"}</span>
-            <br />
-            {"  "}
-            <span>
-              enfoque:{" "}
-              <span style={{ color: "#e2eff8" }}>"Backend & Web Dev"</span>,
-            </span>
-            <br />
-            {"  "}
-            <span>
-              status:{" "}
-              <span style={{ color: "#36217e" }}>"Open to work"</span>,
-            </span>
-            <br />
-            {"  "}
-            <span>
-              pasión:{" "}
-              <span style={{ color: "#e2eff8" }}>"Software craftmanship"</span>
-            </span>
-            <br />
-            <span style={{ color: "#e2eff8" }}>{"}"}</span>
           </div>
         </div>
 
