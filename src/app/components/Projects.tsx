@@ -10,7 +10,7 @@ const projects = [
     color: "#2d5d7b",
     accent: "#8950d1",
     emoji: "🏓",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=340&fit=crop&auto=format",
+    image: "/images/PixelPongPantallaCarga.png",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projects = [
     color: "#36217e",
     accent: "#8950d1",
     emoji: "⚔️",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=340&fit=crop&auto=format",
+    image: "/images/souls2d.png",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const projects = [
     color: "#2d5d7b",
     accent: "#36217e",
     emoji: "🖥️",
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=340&fit=crop&auto=format",
+    image: "/images/ErgoPad.png",
   },
 ];
 
