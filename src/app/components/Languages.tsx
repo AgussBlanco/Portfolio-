@@ -10,7 +10,7 @@ const languages = [
   },
   {
     name: "Inglés",
-    level: "C1 — Proficiency",
+    level: "C1 — Advanced",
     levelTag: "C1",
     flag: "uk",
     description: "Dominio completo del idioma. Lectura técnica, escritura y comprensión auditiva avanzadas.",
@@ -28,12 +28,6 @@ export function Languages() {
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
-          <span
-            className="font-mono text-xs tracking-[0.2em] uppercase"
-            style={{ color: "#8950d1" }}
-          >
-            06. Idiomas
-          </span>
           <h2
             className="mt-2"
             style={{ fontSize: "2rem", fontWeight: 700, color: "#e2eff8" }}

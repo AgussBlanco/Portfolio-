@@ -11,12 +11,6 @@ export function Education() {
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
-          <span
-            className="font-mono text-xs tracking-[0.2em] uppercase"
-            style={{ color: "#8950d1" }}
-          >
-            04. Educación
-          </span>
           <h2
             className="mt-2"
             style={{ fontSize: "2rem", fontWeight: 700, color: "#e2eff8" }}

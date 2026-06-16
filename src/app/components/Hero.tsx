@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -151,11 +151,7 @@ export function Hero() {
             <div className="flex items-center gap-2">
               <span style={{ color: "#8950d1" }}>▹</span>
               <span>Estudiante de Computación</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span style={{ color: "#2d5d7b" }}>▹</span>
-              <span>Desarrollador de Software</span>
-            </div>
+            </div>       
           </div>
 
           <p className="text-base leading-relaxed max-w-md" style={{ color: "#8aabbd" }}>
@@ -205,36 +201,6 @@ export function Hero() {
             >
               Contactarme
             </button>
-          </div>
-
-          <div className="flex items-center gap-4 pt-2">
-            {[
-              { icon: <Github size={18} />, href: "https://github.com", label: "GitHub" },
-              { icon: <Linkedin size={18} />, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: <Mail size={18} />, href: "mailto:blancoagustin049@gmail.com", label: "Email" },
-            ].map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2 rounded-lg transition-all duration-200"
-                style={{ color: "#8aabbd", border: "1px solid rgba(45,93,123,0.2)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#8950d1";
-                  e.currentTarget.style.borderColor = "rgba(137,80,209,0.4)";
-                  e.currentTarget.style.background = "rgba(137,80,209,0.08)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#8aabbd";
-                  e.currentTarget.style.borderColor = "rgba(45,93,123,0.2)";
-                  e.currentTarget.style.background = "transparent";
-                }}
-                aria-label={s.label}
-              >
-                {s.icon}
-              </a>
-            ))}
           </div>
         </div>
       </div>
