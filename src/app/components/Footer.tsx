@@ -12,13 +12,13 @@ export function Footer() {
           className="font-mono text-sm tracking-widest"
           style={{ color: "#8950d1" }}
         >
-          AB<span style={{ color: "#e2eff8", opacity: 0.35 }}>.dev</span>
+          
         </span>
         <p className="text-sm" style={{ color: "#8aabbd" }}>
           Agustín Blanco — Estudiante de Computación
         </p>
         <p className="font-mono text-xs" style={{ color: "rgba(138,171,189,0.4)" }}>
-          © 2025 · Diseñado y desarrollado con ❤️
+          © 2026 · Diseñado y desarrollado con ❤️
         </p>
       </div>
     </footer>

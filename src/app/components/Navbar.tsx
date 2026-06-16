@@ -40,7 +40,7 @@ export function Navbar() {
           style={{ color: "#8950d1" }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          AB<span style={{ color: "#e2eff8", opacity: 0.4 }}>.dev</span>
+          
         </span>
 
         {/* Desktop */}
